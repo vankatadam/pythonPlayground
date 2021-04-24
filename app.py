@@ -117,6 +117,12 @@ class Human:
         print("eq is called")
         return self.name == other.name and self.age == other.age
 
+    def getAge(self):
+        return self.age
+
+    def printAge(self):
+        print("Age of super {self.age}")
+
 # print(someGuy) #calls __str__ function
 
 
@@ -125,6 +131,45 @@ theSameGuy = Human("Josh", 33)
 
 # print(someGuy == theSameGuy)  # true because eq is called
 
-humancountHuman.humanCount
+# 2 da init zwemal aufgerufen insg im ganzer App
+hCount = Human.humanCount
 
-print()
+
+class Student(Human, Whale):
+    def __init__(self, name, age):
+        super().__init__(name, age)
+
+    def learn(self):
+        print("Student is learning")
+
+    def printAge(self):  # überschriebene Methode
+        print(f"Student is {super().getAge()}")
+
+
+someStudent = Student("Doe", 21)
+studentsName = someStudent.name  # Doe, name was inherited
+
+# someStudent.swim() #inherithed from whale
+
+
+class Point:
+    def __init__(self, x, y):  # it has to be written with _x, otherwise it wont work
+        self._x = x
+        self._y = y
+
+    def set_x(self, x):
+        self._x = x
+        print("x setter new value: ", x)
+
+    def get_x(self):
+        print("X getted")
+        return self._x
+
+    x = property(get_x, set_x)
+
+
+# p = Point(5, 5)
+# p.x  # get x
+# p.x = 10  # set x
+
+print(studentsName)
