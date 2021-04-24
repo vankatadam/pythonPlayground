@@ -1,3 +1,5 @@
+import math
+
 x = 1
 y = 5e1
 
@@ -57,6 +59,8 @@ def someNumbers():
     return [1, 2, 3, 4, 5]
 
 
-u, i, o, p, h = someNumbers()
+u, i, o, p, h = someNumbers()  # 1,2,3,4,5
+
+# print(math.sin(math.pi))
 
 print(u, i, o, p, h)
