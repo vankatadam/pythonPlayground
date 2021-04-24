@@ -63,4 +63,68 @@ u, i, o, p, h = someNumbers()  # 1,2,3,4,5
 
 # print(math.sin(math.pi))
 
-print(u, i, o, p, h)
+
+def f(x, y): return x*y
+
+
+# try:
+#     s = "hello world"
+#     i = int(s)
+# except ValueError:
+#     print("Not a number")
+
+def division(a, b):
+    if b == 0:
+        raise ZeroDivisionError()
+    return a/b
+
+
+# div = division(1, 0)
+
+class Panther:
+    def run(self):
+        print("Panther Running")
+
+
+class Jaguar:
+    def run(self):
+        print("Jaguar Running")
+
+
+class Whale:
+    def swim(self):
+        print("Whale swimming")
+
+
+randomAnimals = (Panther, Jaguar, Whale)
+
+# for animal in randomAnimals:
+#     animal.run() #whale has no attribute run, but other methods were called
+
+
+class Human:
+    humanCount = 0
+
+    def __init__(self, name="Noname", age="0"):
+        self.name = name
+        self.age = age
+        Human.humanCount += 1
+
+    def __str__(self):
+        return f"This human is called {self.name} and his age is {self.age}"
+
+    def __eq__(self, other):
+        print("eq is called")
+        return self.name == other.name and self.age == other.age
+
+# print(someGuy) #calls __str__ function
+
+
+someGuy = Human("Josh", 33)
+theSameGuy = Human("Josh", 33)
+
+# print(someGuy == theSameGuy)  # true because eq is called
+
+humancountHuman.humanCount
+
+print()
