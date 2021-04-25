@@ -1,4 +1,5 @@
 import math
+import numpy as np
 
 x = 1
 y = 5e1
@@ -172,4 +173,12 @@ class Point:
 # p.x  # get x
 # p.x = 10  # set x
 
-print(studentsName)
+npArr = np.array([10, 10, 10, 10])
+npArr2 = np.array([[10, 10, 10], [10, 10, 10], [10, 10, 10]])
+npArr3 = np.arange(10)  # [0 1 2 3 4 5 6 7 8 9]
+
+shape = npArr.shape  # (4,)
+shape2 = npArr2.shape  # (3,3)
+shape3 = npArr3.shape  # (10,)
+
+print()
