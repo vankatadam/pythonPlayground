@@ -178,7 +178,16 @@ npArr2 = np.array([[10, 10, 10], [10, 10, 10], [10, 10, 10]])
 npArr3 = np.arange(10)  # [0 1 2 3 4 5 6 7 8 9]
 
 shape = npArr.shape  # (4,)
-shape2 = npArr2.shape  # (3,3)
+shape2 = npArr2.shape  # (3,3) => gesamtanzahl der Items 3x3 = 9
 shape3 = npArr3.shape  # (10,)
 
-print()
+reShaped = npArr3.reshape(2, 5)
+reShaped2 = npArr3.reshape(5, 2)
+reShaped3 = npArr2.flatten()  # [10 10 10 10 10 10 10 10 10]
+
+npArr4 = np.arange(1, 7)
+npArr5 = np.arange(7, 13)
+addArr = npArr4 + npArr5  # [ 8 10 12 14 16 18]
+
+
+print(addArr)
